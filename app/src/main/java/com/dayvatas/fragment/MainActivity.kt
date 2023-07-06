@@ -16,7 +16,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun firstFragment(view: View){
-
+        val fragmentManager = supportFragmentManager
+        val fragmentTransaction = fragmentManager.beginTransaction()
+        val firstFragment = BlankFragment()
+        fragmentTransaction.add(R.id.frameLayout, firstFragment).commit()
     }
     fun secondFragment(view: View){
 
